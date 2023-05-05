@@ -1,0 +1,12 @@
+public class TestComputable
+{
+    public static void main(String[] args)
+    {
+        Computable<Double> comp = (x, y) -> x + y;
+        printResult(comp);
+    }
+    public static void printResult(Computable compIn)
+    {
+        System.out.println(compIn.compute(10.0, 5.0));
+    }
+}
