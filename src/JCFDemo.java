@@ -14,6 +14,9 @@ public class JCFDemo
         printQ.add("LifeStyle");
         printQ.add("Fiction");
         printQ.add("Material");
+        printQ.add("Physical");
+        printQ.add("Social");
+        printQ.add("Mercurial");
 
         someOblongs.add(new Oblong(7, 4));
         someOblongs.add(new Oblong(6, 11));
@@ -64,6 +67,22 @@ public class JCFDemo
         {
             System.out.println("Print Queue is not empty");
         }
+
+        for(String item: printQ)  // iterate through all items in the 'printQ' list
+        {
+            if(item.endsWith("tion")) // check if it actually ends with "ogy"
+            {
+                System.out.println(item); // display the item
+            }
+        }
+        // Using the forEach loop to iterate through the list
+        printQ.forEach(item ->
+                 {
+                     if(item.endsWith("ial")) // check if an element ends with "ial"
+                     {
+                         System.out.println(item);  // display the item
+                     }
+                 });
     }
 
 }
