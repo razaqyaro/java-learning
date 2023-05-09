@@ -26,5 +26,22 @@ public class SetDemo
         regNums.remove("X85ADZ");
         System.out.println(regNums);
 
+        // Using the enhanced for loop to iterate through the regNums
+        for(String item: regNums) // iterate through all the items in 'regNums'
+        {
+            if(item.charAt(0) > 'T') // check if first letter of registration
+            {
+                System.out.println(item);   // display this registration
+            }
+        }
+
+        // Equivalent forEach loop doing same job
+        regNums.forEach(item ->
+        {
+            if(item.charAt(0) > 'T')
+            {
+                System.out.println(item);
+            }
+        });
     }
 }
