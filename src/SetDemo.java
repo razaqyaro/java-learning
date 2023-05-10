@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Set;
 import java.util.HashSet;
 public class SetDemo
@@ -43,5 +44,24 @@ public class SetDemo
                 System.out.println(item);
             }
         });
+        regNums.add("X85ADZ");
+        /*
+        An Iterator object can be used with a 'while' loop if we wish to iterate over a set and modify i
+        its contents
+        * */
+
+        // Creating an Iterator object
+        Iterator<String> elements = regNums.iterator();
+        // repeatedly  retrieve an object as long as there are items to be retrieved
+        while(elements.hasNext())
+        {
+            String item = elements.next(); // retrieve next element from the set
+            if(item.charAt(0) <= 'T') // check first letter of registration
+            {
+                elements.remove(); // call the iterator method to remove registration
+            }
+        }
+        System.out.println("***********************************");
+        System.out.println(regNums);
     }
 }
